@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Love Calculator</title>
+	<style>
+		body {
+      background-color:#ffccd4;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+		}
+		form {
+			margin-top: 50px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		#result {
+			margin-top: 50px;
+			font-size: 24px;
+		}
+    #footer{
+  text-align: center;
+  padding: 7% 15%;
+}
+.social-icon{
+  margin:20px 10px;
+  color:black;
+}
+	</style>
+</head>
+<body >
+	<h1>Love Calculator</h1>
+	<form id="loveForm">
+		<input type="text" id="name1" placeholder="Enter your name"><br>
+		<input type="text" id="name2" placeholder="Enter your partner's name"><br>
+		<input type="submit" value="Calculate">
+	</form>
+	<div id="result"></div>
+  <footer id="footer">
+<i class="social-icon fa-brands fa-twitter" style="font-size:24px"></i>
+<i class="social-icon fa-brands fa-facebook" style="font-size:24px"></i>
+<i class="social-icon fa-brands fa-instagram" style="font-size:24px"></i>
+<i class="social-icon fa-solid fa-envelope" style="font-size:24px"></i>
+  <p>© Copyright Neeraj</p>
+
+</footer>
+
+	<script>
+		document.getElementById("loveForm").addEventListener("submit", function(event) {
+			event.preventDefault();
+			var name1 = document.getElementById("name1").value;
+			var name2 = document.getElementById("name2").value;
+			var lovePercentage = Math.floor(Math.random() * 101);
+			document.getElementById("result").innerHTML = name1 + " and " + name2 + " have a " + lovePercentage + "% love compatibility!";
+		});
+
+
+  </script>
